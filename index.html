@@ -104,6 +104,31 @@
         <a href="#"><img src="img/map.jpg" alt="Местоположения Техномарт"></a>
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/map-big.jpg" width="970" height="476" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close">Закрить</button>
+      </section>
+      <section class="contact-us-form">
+        <h2 class="visually-hidden">Форма связи</h2>
+        <form class="contact-us" action="https://echo.htmlacademy.ru" method="post">
+          <p class="contact-item">
+            <label for="contact-name">Ваше имя:</label>
+            <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p class="contact-item">
+            <label for="contact-email">Ваш e-mail:</label>
+            <input id="contact-email" type="text" name="email" value="" placeholder="email@example.com">
+          </p>
+          <p class="contact-item">
+            <label for="contact-text">Текст письма:</label>
+            <textarea id="contact-text" rows="10" cols="30" name="text" placeholder="В свободной форме"></textarea><!--На stackoverflow пишут что нельзя писать input type="textarea", единственный способ добавить textarea - тегом <textarea></textarea>-->
+          </p>
+          <button name="button" type="submit">Отправить</button>
+        </form>
+      </section>
     </main>
     <footer>
       <span class="logo">Техномарт</span>
