@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -44,12 +49,14 @@
     </header>
     <main>
       <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a class="breadcrumbs-home" href="index.html">Главная</a></li>
-        <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
-        <li class="breadcrumbs-item"><a href="#">Инструмент</a></li>
-        <li class="breadcrumbs-item-current"><a>Перфораторы</a></li>
+        <li><a class="breadcrumbs-item breadcrumbs-home" href="index.html">Главная</a></li>
+        <li><a class="breadcrumbs-item" href="#">Каталог</a></li>
+        <li><a class="breadcrumbs-item" href="#">Инструмент</a></li>
+        <li><a class="breadcrumbs-item-current breadcrumbs-current">Перфораторы</a></li>
       </ul>
-      <h1>Перфораторы</h1>
+      <div class="h1-name">
+        <h1>Перфораторы</h1>
+      </div>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр Товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -92,7 +99,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button filter-button" type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
       <section class="sorting-filter">
@@ -105,7 +112,7 @@
           <li class="catalog-item">
             <!-- Не счел нужным разделять название товора на 2 спана как в Барбершопе. Здесь только одна категория - перфораторы-->
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 3000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 3000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-1.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
               </p>
@@ -119,7 +126,7 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 6000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 6000</h3>
               <p class="catalog-item-image">
                   <img src="img/product-2.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
               </p>
@@ -133,10 +140,10 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 2000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 2000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-1.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 6000">
-                <span class="new-item">new</span>
+                <img src="img/new-flag.png" width="60" height="59" alt="New item flag">
               </p>
               <span class="product-price">12500 Р.</span>
             </a>
@@ -147,7 +154,7 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 3000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 3000</h3>
               <p class="catalog-item-image">
                   <img src="img/product-1.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
               </p>
@@ -162,11 +169,11 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 6000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 6000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-2.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                <img src="img/new-flag.png" width="60" height="59" alt="New item flag">
               </p>
-              <span class="new-item">new</span>
               <span class="product-price-old">30500 Р.</span>
               <span class="product-price">25500 Р.</span>
             </a>
@@ -177,7 +184,7 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 2000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 2000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-1.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
               </p>
@@ -190,10 +197,10 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 3000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 3000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-2.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 3000">
-                <span class="new-item">new</span>
+                <img src="img/new-flag.png" width="60" height="59" alt="New item flag">
               </p>
 
               <span class="product-price-old">22500 Р.</span>
@@ -206,7 +213,7 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 6000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 6000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-2.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
               </p>
@@ -220,7 +227,7 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <h3 class="catalag-item-title">Перфоратор BOSH BFG 2000</h3>
+              <h3 class="catalog-item-title">Перфоратор BOSH BFG 2000</h3>
               <p class="catalog-item-image">
                 <img src="img/product-1.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 6000">
               </p>
@@ -258,8 +265,8 @@
          </p>
       </section>
     </main>
-    <footer>
-      <span class="logo">Техномарт</span>
+    <footer class="main-footer">
+      <span class="main-logo">Техномарт</span>
       <p class ="footer-contacts">
         <b>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         +7 (812) 555-05-55</b>
@@ -268,7 +275,7 @@
         <ul class="footer-company-navigation-list">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a>Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -283,7 +290,8 @@
       </nav>
       <section class="footer-bottom">
         <h3 class="footer-copyright">
-          © 2010–2017 Компания «Техномарт» Все права защищены
+          © 2010–2017 Компания «Техномарт»
+          Все права защищены
         </h3>
         <div class="footer-social">
           <ul>

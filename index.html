@@ -3,17 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <nav class="search-and-order-nav">
-        <span class="main-logo">Техномарт</span><!--логотип можно сделать с СSS-->
-        <span class="search">Поиск</span>
-        <ul class="order-menu">
-          <li class="bookmarks"><a href="#">Закладки: 0</a></li>
-          <li class="basket"><a href="#">Корзина: 0</a></li>
-          <li class="order-button"><a href="#">Оформить заказ</a></li>
-        </ul>
+        <div class="navigation-items">
+          <span class="main-logo">Техномарт</span><!--логотип можно сделать с СSS-->
+          <span class="search">Поиск:</span>
+          <ul class="order-menu">
+            <li class="bookmarks"><a href="#">Закладки: 0</a></li>
+            <li class="basket"><a href="#">Корзина: 0</a></li>
+            <li class="order-button"><a href="#">Оформить заказ</a></li>
+          </ul>
+        </div>
       </nav>
       <p class="shop-description">
         Интернет-магазин
@@ -25,8 +32,8 @@
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
       <ul class="login">
-        <li class="login-link">Войти</li>
-        <li class="registration-link">Регистрация</li>
+        <li class="login-link"><a href="#">Войти</a></li>
+        <li class="registration-link"><a href="#">Регистрация</a></li>
       </ul>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
@@ -50,7 +57,7 @@
         </p>
         <ul class="service-list">
           <li>
-            <h3 class="button button-active">Доставка</h3>
+            <h3 class="services-tab tab-active">Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!
@@ -60,7 +67,7 @@
             <img src="img/delivery.png" width="468" height="261" alt="Доставка">
           </li>
           <li>
-            <h3 class="button">Гарантия</h3>
+            <h3 class="services-tab">Гарантия</h3>
             <p>
               Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгаранием,
@@ -71,7 +78,7 @@
             <img src="img/guarantee.png" width="389" height="283" alt="Гарантия">
           </li>
           <li>
-            <h3 class="button button-active">Кредит</h3>
+            <h3 class="services-tab">Кредит</h3>
             <p>
               Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.
@@ -96,7 +103,7 @@
           </ul>
           <a class="button" href="#">Подробнее о компании</a>
       </section>
-      <section class="contacts">
+      <section class="about-tecnomart contacts">
         <h2>КОНТАКТЫ</h2>
         <p>
           Вы можете забрать товар сами,
@@ -126,12 +133,13 @@
             <label for="contact-text">Текст письма:</label>
             <textarea id="contact-text" rows="10" cols="30" name="text" placeholder="В свободной форме"></textarea><!--На stackoverflow пишут что нельзя писать input type="textarea", единственный способ добавить textarea - тегом <textarea></textarea>-->
           </p>
-          <button name="button" type="submit">Отправить</button>
+          <button class="button button-close" name="button" type="submit">Отправить</button>
+          <button class="modal-close">Закрить</button>
         </form>
       </section>
     </main>
-    <footer>
-      <span class="logo">Техномарт</span>
+    <footer class="main-footer">
+      <span class="main-logo">Техномарт</span>
       <p class ="footer-contacts">
         <b>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         +7 (812) 555-05-55</b>
