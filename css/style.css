@@ -10,13 +10,14 @@ body {
   background-color: #ffffff;
 }
 
-h1 {
+.main-h1 {
   font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
 }
+
 .button {
   font: inherit;
 
@@ -27,7 +28,7 @@ h1 {
   color: #ffffff;
 
   background-color: #ee3643;
-  border: none;
+  border: 0;
 }
 
 .button:hover,
@@ -50,7 +51,6 @@ h1 {
   color: #ffffff;
 
   background-color: #293449;
-
 }
 
 .main-logo {
@@ -70,7 +70,7 @@ h1 {
 .main-logo:hover,
 .main-logo:focus {
   background-color: #ca2c37;
-  border-color: : #9a212a;
+  border-color: #9a212a;
 }
 
 .main-logo:active {
@@ -106,16 +106,35 @@ h1 {
   background-color: #161d29;
 }
 
-.order-button a {
+.inner-basket {
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: #ee3643;
+}
+
+.order-menu .inner-basket:hover,
+.order-menu .inner-basket:focus {
+  background-color: #ca2c37;
+}
+
+.order-menu .inner-basket:active {
+  background-color: #ba2732;
+}
+
+.order-menu .order-button {
+  color: #ffffff;
+
   background-color: #63a63e;
 }
 
-.order-button a:hover {
+.order-menu .order-button:hover,
+.order-menu .order-button:focus {
   background-color: #5fbb2d;
 }
 
-.order-button a:active {
-  background-color: #5fbb2d;
+.order-menu .order-button:active {
+  background-color: #518534;
 }
 
 .header-buttom {
@@ -148,7 +167,6 @@ h1 {
 }
 
 .login a {
-
   font-size: 21px;
   line-height: 21px;
   text-decoration: none;
@@ -170,6 +188,7 @@ h1 {
   font-size: 21px;
   line-height: 21px;
 }
+
 .user-name:active {
   opacity: 0.3;
 }
@@ -194,6 +213,7 @@ h1 {
   color: #32425c;
   opacity: 0.3;
 }
+
 .main-navigation-list {
   list-style: none;
 }
@@ -203,8 +223,8 @@ h1 {
   border-bottom: 2px solid #293449;
 }
 
-.main-navigation-list a:hover,
-.main-navigation-list a:focus {
+.main-navigation-list li:hover,
+.main-navigation-list li:focus {
   background-color: #1d2739;
 }
 
@@ -227,6 +247,7 @@ h1 {
   color: #000000;
 
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .h1-name {
@@ -234,13 +255,15 @@ h1 {
 }
 
 .filter fieldset {
-  border: none;
+  border: 0;
 }
 
 .filter legend {
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
+
+  text-transform: uppercase;
 }
 
 .filter ul {
@@ -360,7 +383,6 @@ h1 {
   color: #000000;
 
   text-decoration: none;
-
 }
 
 .pagination-item-current {
