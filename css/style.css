@@ -11,6 +11,8 @@ body {
 }
 
 .main-h1 {
+  margin:0;
+  padding: 33px 0 35px 30px;
   font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -41,16 +43,62 @@ body {
 }
 
 .main-header {
-  background-color: #f4f7f9;
+  background-color: #f3f7f8;
+}
+
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .search-and-order-nav {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
   font-family: "Cuprum", sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
 
   background-color: #293449;
+}
+.navigation-items {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.navigation-second-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  margin-left: 50px;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.nav-sec-first {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  padding-right: 50px;
+}
+
+.nav-sec-sec {
+  width: 300;
+  margin: 20px 0;
+}
+
+.nav-sec-third {
+  width: 300px;
+}
+
+.main-navigation {
+  margin: 0;
+  padding: 0;
 }
 
 .main-logo {
@@ -64,11 +112,20 @@ body {
   color: #ffffff;
 
   background-color: #ee3643;
-  border-bottom: 4px solid #b52933;
+  border-bottom: 5px solid #b52933;
+}
+
+.bottom-logo {
+  padding: 21px 40px 21px 40px;
+  display: inline-block;
+
+  font-size: 30px;
+  line-height: 30px;
+  margin-right: 160px;
 }
 
 .main-logo:hover,
-.main-logo:focus {
+.main-logo:focus, {
   background-color: #ca2c37;
   border-color: #9a212a;
 }
@@ -89,6 +146,10 @@ body {
 }
 
 .order-menu {
+  display: flex;
+  width: 460px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -187,6 +248,8 @@ body {
 .user-name {
   font-size: 21px;
   line-height: 21px;
+
+  background-color: #ffffff;
 }
 
 .user-name:active {
@@ -215,10 +278,20 @@ body {
 }
 
 .main-navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
+
+  padding: 0;
+  margin: 0;
 }
 
 .main-navigation-list li {
+  flex-grow: 1;
+  margin: 0;
+  padding: 21px 31px;
+
   background-color: #32425c;
   border-bottom: 2px solid #293449;
 }
@@ -236,7 +309,34 @@ body {
   color: #ffffff;
 }
 
+.services {
+    background-color: #f3f7f8;
+}
+
+.service-description{
+  width: 400px;
+}
+
+.services h2 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+}
+
+.service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 24px 0;
   list-style: none;
 }
 
@@ -253,8 +353,25 @@ body {
 .h1-name {
   background-color: #f2f6f8;
 }
+.filter-and-catalog {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  margin: 0;
+}
 
 .filter fieldset {
+  width: 220px;
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -267,6 +384,8 @@ body {
 }
 
 .filter ul {
+  margin: 0;
+  padding: 0;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
@@ -282,6 +401,23 @@ body {
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 1px;
+}
+
+.sorting-filter {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.catalog {
+  display: flex;
+  width: 700px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-item {
@@ -393,8 +529,13 @@ body {
 
 .about-tecnomart {
   margin: 0;
+  padding-top: 80px;
 
   background-color: #ffffff;
+}
+
+.company {
+  width: 540px;
 }
 
 .about-tecnomart h2 {
@@ -412,7 +553,11 @@ body {
   line-height: 24px;
 }
 
+
+
 .delivery-options {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -421,16 +566,77 @@ body {
   line-height: 20px;
 }
 
+.contacts {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  width:270px;
+}
+
 .main-footer {
+
   font-family: "Cuprum", sans-serif;
   font-size: 18px;
-  line-height: #24px;
+  line-height: 24px;
   color: #ffffff;
 
   background-color: #32425c;
 }
 
+.footer-first-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.footer-company-navigation {
+  width: 550px;
+  margin-left: auto;
+}
+
+.footer-second-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+.footer-copyright {
+  width: 240px;
+  margin-top: 0;
+  margin-right: 60px;
+}
+
+.footer-items-navigation {
+  width: 550px;
+  margin-left: auto;
+}
+
+.footer-third-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 35px;
+  font-family: "Cuprum", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-links {
+  padding: 0;
+  width: 300px;
+  margin-left: auto;
+}
+
+.footer-link-item {
+  padding: 0;
+  margin: 0;
+}
+
 .main-footer ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -481,6 +687,12 @@ text-decoration: none;
 .footer-bottom .footer-link:active {
   color: #ee3643;
   text-decoration: none;
+}
+
+.footer-social {
+  width: 240px;
+  justify-content: flex-end;
+  /*padding: 0 15px;*/
 }
 
 .social-button{

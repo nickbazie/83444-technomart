@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -10,44 +10,56 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <nav class="search-and-order-nav">
-        <span class="main-logo">Техномарт</span>
-        <span class="search">Поиск</span>
-        <ul class="order-menu">
-          <li class="bookmarks"><a href="#">Закладки: 0</a></li>
-          <li class="inner-basket"><a href="#">Корзина: 10</a></li>
-          <li class="order-button"><a href="#">Оформить заказ</a></li>
-        </ul>
-      </nav>
-      <p class="shop-description">
-        Интернет-магазин
-        строительных материалов
-        и инструментов для ремонта
-      </p>
-      <p class="contacts">
-        <span class="phone">+7 (812) 555-05-55</span>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      </p>
-      <ul class="user-interface">
-        <li class="user-name">Равшан Джамшутович</li>
-        <li class="user-logout">Выйти</li>
-        <li class="user-orders"><a href="#">Мои заказы</a></li>
-        <li class="user-profile"><a href="#">Личный Кабинет</a></li>
-      </ul>
-      <nav class="main-navigation">
-        <ul class="main-navigation-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li class="current-page"><a>Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+    <header class="main-header">
+      <div class="container">
+        <nav class="search-and-order-nav">
+          <div class="navigation-items">
+            <span class="main-logo">Техномарт</span>
+            <span class="search">Поиск</span>
+            <ul class="order-menu">
+              <li class="bookmarks"><a href="#">Закладки: 0</a></li>
+              <li class="inner-basket"><a href="#">Корзина: 10</a></li>
+              <li class="order-button"><a href="#">Оформить заказ</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="navigation-second-row">
+          <div class="nav-sec-first">
+            <p class="shop-description">
+              Интернет-магазин
+              строительных материалов
+              и инструментов для ремонта
+            </p>
+          </div>
+          <div class="nav-sec-sec">
+            <p class="contacts">
+              <span class="phone">+7 (812) 555-05-55</span>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </p>
+          </div>
+          <div class="nav-sec-third">
+            <ul class="user-interface">
+              <li class="user-name">Равшан Джамшутович</li>
+              <li class="user-logout">Выйти</li>
+              <li class="user-orders"><a href="#">Мои заказы</a></li>
+              <li class="user-profile"><a href="#">Личный Кабинет</a></li>
+            </ul>
+        </div>
+        </div>
+        <nav class="main-navigation">
+          <ul class="main-navigation-list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Компания</a></li>
+            <li class="current-page"><a>Каталог</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
+    <main class="container">
       <ul class="breadcrumbs">
         <li><a class="breadcrumbs-item breadcrumbs-home" href="index.html">Главная</a></li>
         <li><a class="breadcrumbs-item" href="#">Каталог</a></li>
@@ -57,9 +69,10 @@
       <div class="h1-name">
         <h1 class="main-h1">Перфораторы</h1>
       </div>
+      <div class="filter-and-catalog">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр Товаров</h2>
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
           <!--Тут будет фильтр Цена-->
           <fieldset>
             <legend>Производители:</legend>
@@ -256,6 +269,7 @@
           <li class="pagination-item"><a href="#">Cледущая</a></li>
         </ul>
       </section>
+      </div>
       <section class="about-rotary-hammers">
         <h2 class="about-section-title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
         <p class="about-section-description">
@@ -295,7 +309,7 @@
         </h3>
         <div class="footer-social">
           <ul>
-            <li><a class="social-button" href="#">Вконтакте</a></li>
+            <li><a class="social-bu tton" href="#">Вконтакте</a></li>
             <li><a class="social-button" href="#">Фейсбук</a></li>
             <li><a class="social-button" href="#">Инстаграм</a></li>
           </ul>
