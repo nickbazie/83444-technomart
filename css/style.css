@@ -54,9 +54,6 @@ body {
 }
 
 .search-and-order-nav {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
   font-family: "Cuprum", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -66,13 +63,11 @@ body {
 }
 .navigation-items {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .navigation-second-row {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
 
   margin-left: 50px;
@@ -147,7 +142,7 @@ body {
 
 .order-menu {
   display: flex;
-  width: 460px;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -282,7 +277,7 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-
+  text-align: center;
   padding: 0;
   margin: 0;
 }
@@ -528,6 +523,7 @@ body {
 }
 
 .about-tecnomart {
+  display: flex;
   margin: 0;
   padding-top: 80px;
 
@@ -574,7 +570,6 @@ body {
 }
 
 .main-footer {
-
   font-family: "Cuprum", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -585,37 +580,47 @@ body {
 
 .footer-first-row {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-company-navigation {
-  width: 550px;
-  margin-left: auto;
+  display: flex;
 }
 
+.footer-company-navigation-list {
+  display: flex;
+  justify-content: space-between;
+}
 .footer-second-row {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
   margin-top: 35px;
   margin-bottom: 50px;
 }
+.footer-second-row p {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-items-navigation-list {
+  display: flex;
+  align-items: center;
+}
 
 .footer-copyright {
-  width: 240px;
   margin-top: 0;
   margin-right: 60px;
 }
 
 .footer-items-navigation {
-  width: 550px;
-  margin-left: auto;
+
 }
 
 .footer-third-row {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
   padding-top: 35px;
   font-family: "Cuprum", sans-serif;
@@ -623,10 +628,19 @@ body {
   line-height: 18px;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
 .footer-links {
+  display: flex;
   padding: 0;
-  width: 300px;
-  margin-left: auto;
+}
+.footer-social-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-link-item {
@@ -687,12 +701,6 @@ text-decoration: none;
 .footer-bottom .footer-link:active {
   color: #ee3643;
   text-decoration: none;
-}
-
-.footer-social {
-  width: 240px;
-  justify-content: flex-end;
-  /*padding: 0 15px;*/
 }
 
 .social-button{
