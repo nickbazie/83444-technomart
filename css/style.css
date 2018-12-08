@@ -71,8 +71,8 @@ body {
 
 .navigation-second-row {
   display: flex;
-  align-items: flex-start;
-
+  align-items: center;
+  justify-content: space-between;
   margin-left: 50px;
   margin-top: 45px;
   margin-bottom: 40px;
@@ -81,17 +81,16 @@ body {
 .nav-sec-first {
   margin: 0;
   padding: 0;
-  width: 300px;
-  padding-right: 50px;
 }
 
 .nav-sec-sec {
-  width: 300;
-  margin: 20px 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-sec-third {
-  width: 300px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation {
@@ -119,11 +118,13 @@ body {
 
 .bottom-logo {
   padding: 21px 40px 21px 40px;
-  display: inline-block;
 
   font-size: 30px;
   line-height: 30px;
   margin-right: 160px;
+
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .main-logo:hover,
@@ -216,6 +217,8 @@ body {
 }
 
 .shop-description {
+  margin: 0;
+  padding: 0;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -237,6 +240,8 @@ body {
 }
 
 .login {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -562,10 +567,6 @@ body {
   background-color: #ffffff;
 }
 
-.company {
-  width: 540px;
-}
-
 .about-tecnomart h2 {
   font-family: "Cuprum", sans-serif;
   font-size: 30px;
@@ -598,7 +599,6 @@ body {
   margin: 0;
   padding: 0;
   margin-left: auto;
-  width:270px;
 }
 
 .main-footer {
@@ -728,6 +728,10 @@ text-decoration: none;
 .footer-bottom .footer-link:hover,
 .footer-bottom .footer-link:focus {
   text-decoration: underline;
+}
+
+.main-footer .main-logo a{
+  text-decoration: none;
 }
 
 .footer-bottom .footer-link:active {
