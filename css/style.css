@@ -528,6 +528,8 @@ body {
 }
 
 .pagination-list {
+  display: flex;
+  justify-content: center;
   font-size: 13px;
   line-height: 18px;
 
