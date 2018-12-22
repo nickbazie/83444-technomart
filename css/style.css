@@ -98,7 +98,6 @@ input[type="radio"].visually-hidden {
   display: block;
   position: relative;
   padding: 11px 55px 7px 55px;
-  vertical-align: middle;
   letter-spacing: inherit;
   font-size: 24px;
   line-height: 24px;
@@ -175,7 +174,7 @@ input[type="radio"].visually-hidden {
   height: 17px;
 
   background-image: url("../img/icon-search.svg");
-  background-repeat: ;
+  background-repeat: no-repeat;
   background-position: 0 0;
 
   opacity: 0.3;
@@ -789,11 +788,26 @@ opacity: 1;
 }
 
 .filter legend {
+  position: relative;
+  padding-top: 20px;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
-
+  padding-bottom: 15px;
   text-transform: uppercase;
+}
+
+.filter legend::before {
+  position: absolute;
+  content: "";
+  top: 1px;
+  
+  width: 220px;
+
+  border: 1px solid #f7f3ec;
+
+  
+
 }
 
 .filter ul {
@@ -803,6 +817,72 @@ opacity: 1;
   line-height: 20px;
   text-transform: uppercase;
   list-style: none;
+}
+
+.filter-option {
+  margin-left: 34px;
+  margin-bottom: 20px;
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -34px;
+
+  width: 23px;
+  height: 23px;
+
+  background: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+  top: -2px;
+  left: -34px;
+  background: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -35px;
+
+  width: 25px;
+  height: 25px;
+
+  background: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+
+  width: 27px;
+  height: 23px;
+  top: -3px;
+  left: -35px;
+  background: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
 }
 
 .filter-button {
@@ -840,17 +920,22 @@ opacity: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  width: 750px;
   padding: 0;
-  margin: 0;
+  margin-left: 20px;
 }
 
 .catalog-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  border: 1px solid #e5e5e5;
+  position:relative;
+  display:inline-block;
+  width:218px;
+  margin-right:20px;
+  margin-bottom:20px;
+  padding-top: 30px;
+  border:1px solid #ccc;
+  line-height:20px;
+  font-weight:bold;
+  text-align:center;
 }
 
 .catalog-item a {
@@ -858,7 +943,83 @@ opacity: 1;
   text-decoration: none;
 }
 
+.catalog-item .flag{
+  position:absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  top:-1px;
+  right:-1px;
+  width:60px;
+  height:60px;
+  text-indent:-1000px;
+  overflow:hidden;
+   z-index:20;
+}
+
+.catalog-item .flag-new{
+  background:url("../img/new-flag.png") no-repeat 0 0;
+}
+
+.catalog-item .actions{
+  position:absolute;
+  top:0;
+  left:0;
+  width:218px;
+  height:88px;
+  padding:46px 0px;
+  background-color:rgba(255,255,255,0.9);
+  z-index:10;
+}
+.catalog-item .actions .buy,
+.catalog-item .actions .bookmark{
+  display:block;
+  width:129px;
+  margin:0 auto;
+  margin-bottom:7px;
+  padding:7px 0;
+  border:3px solid #63a63e;
+  border-bottom-color:#367315; 
+  background-color:#63a63e;
+  color:white;
+  font-size:14px;
+  font-weight:normal;
+  font-family:"Cuprum", sans-serif;
+  line-height:18px;
+  text-decoration:none;
+  text-transform:uppercase;    
+  border-radius:3px;
+}
+.catalog-item .actions .bookmark{
+  color:#32425c;
+  background:white;
+  border-bottom-color:#63a63e;
+}
+.catalog-item .actions{
+  display:none;
+}
+.catalog-item:hover .actions{
+  display:block;
+}
+
+.catalog-item-image{
+  width:218px;
+  height:140px;
+  margin: 0;
+}
+.catalog-item-image img{
+  max-width:100%;
+  padding-right: 15px;
+}
+
 .catalog-item-title {
+  min-height:40px;
+  padding:0;
+  padding-left: 18px;
+  padding-right: 20px;
+  margin-top:9px;
+  margin-bottom:12px;    
+
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -866,6 +1027,9 @@ opacity: 1;
 
 .product-price-old {
   font-weight: 700;
+  min-height:20px;
+  margin-top:10px;
+  margin-bottom: 5px;
   font-size: 17px;
   line-height: 18px;
   color: #999999;
@@ -873,54 +1037,28 @@ opacity: 1;
   text-decoration: line-through;
 }
 
-.product-price {
-  font-weight: 700;
+.catalog-item .product-price{
+  position:relative;
+  width:80px;
+  margin:8px auto;
+  margin-left: 42px;
+  margin-bottom: 17px;
+  padding:10px 30px;
   font-size: 17px;
   line-height: 18px;
-  color: #ffffff;
-
-  background-color: #ee3643;
+  color:white;
+  background:#ee3643;
+  border-radius:3px;
 }
-
-.product-btn {
-  font-family: "Cuprum", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.product-btn-cart {
-  color: #ffffff;
-
-  background-color: #63a63e;
-  border-bottom: 3px solid #367315;
-  border-radius: 3px;
-}
-
-.product-btn-cart:hover,
-.product-btn-cart:focus {
-  background-color: #5fbb2d;
-}
-
-.product-btn-cart:active {
-  background-color: #518534;
-  border-color: #518534;
-}
-
-.product-btn-bkmrk {
-  color: #32425c;
-
-  background-color: #ffffff;
-  border: 3px solid #63a63e;
-  border-radius: 3px;
-}
-
-.product-btn-bkmrk:hover,
-.product-btn-bkmrk:focus {
-  border-color: #32425c;
-}
-
-.product-btn-bkmrk:active {
-  opacity: 0.3;
+.catalog-item .product-price:after{
+  content:"";
+  position:absolute;
+  top:-1px;
+  right:-20px;
+  width:0;
+  height:0;
+  border:20px solid white;
+  border-left-color:#ee3643;
 }
 
 .pagination-list {
@@ -984,7 +1122,6 @@ opacity: 1;
 
 .company {
   width: 550px;
-  padding-right: ;
 }
 
 .delivery-options {
@@ -1241,4 +1378,173 @@ text-decoration: none;
   padding: 0;
   padding-right: 18px;
   margin: 0;
+}
+/*Поп-ап "Товар добавлен в корзину!" */
+
+.add-cart {
+  width: 620px;
+  margin: 0 auto;
+
+  border-top: #ee3643 solid 7px;
+
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75); 
+}
+
+.modal-map {      
+  width: 940px;
+  height: 448px;
+  position: relative;
+
+  box-shadow: 0px 0px 14.72px 1.28px rgba(0, 0, 0, 0.75); 
+
+}
+
+.modal-map img {
+  max-width: 100%;
+}
+
+.modal-close {
+  position: relative;
+  float: right;
+
+  background: none;
+  border: none;
+}
+
+.modal-close::before {
+  position: absolute;
+  content: "";
+  top: 9px;
+  right: 9px;
+
+  width: 21px;
+  height: 21px;
+
+  background: url("../img/icon-close.svg")
+}
+
+.item-added-text {
+  background-color: #fff;
+
+  font-size: 30px;
+  line-height: 30px;  
+}
+
+.item-added-text p {
+  position: relative;
+  margin-top: 69px;
+  margin-left: 180px;
+  margin-bottom: 69px;
+  margin-right: 83px;
+}
+.item-added-text p::before {
+  position: absolute;
+  content: "";
+
+  top: -16px;
+  left: -90px;
+
+  width: 66px;
+  height: 66px;
+
+  background: url("../img/cart-added.svg")
+}
+
+.item-added-buttons {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 39px;
+  padding-bottom: 37px;
+  background-color: #f1f1f1;
+}
+
+.make-order-close {
+  display: inline-block;
+
+  padding: 10px 26px;
+  margin-left: 20px;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+
+  background-color: #ffffff;
+  border:none;
+  border-radius: 3px;
+}
+
+.contact-us {
+  position: relative;
+  width: 620px;
+  margin: 0 auto;
+  border-top: 7px solid #ff5357;
+}
+
+.contact-us p {
+  display: inline-block;
+
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.contact-item {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-item label {
+  margin-bottom: 13px;
+  margin-top: 11px;
+}
+
+.contact-item input {
+  margin-bottom: 11px;
+  padding: 6px 14px;
+}
+
+.contact-item input {
+  width: 220px;
+  font-size: 13px;
+  line-height: 18px;
+  box-sizing: border-box;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+}
+
+.name-surname {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 460px;
+  padding: 37px 80px;
+}
+
+.contact-us-send {
+  padding: 37px 80px;
+  background-color: #f4f4f4;
+}
+.contact-item label {
+  display: block;
+}
+.contact-item textarea {
+  width: 460px;
+
+  padding: 6px 14px;
+
+  font-size: 13px;
+  line-height: 18px;
+  
+  box-sizing: border-box;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+}
+.contact-us-send button {
+  display: block;
+  width: 460px;
+  text-align: center;
 }

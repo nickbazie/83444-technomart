@@ -210,31 +210,37 @@
         </div>
       </section>
     </footer>
-    <section class="modal modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <p>
-        <img src="img/map-big.jpg" width="970" height="476" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      </p>
-      <button class="modal-close">Закрить</button>
-    </section>
-    <section class="contact-us-form">
-      <h2 class="visually-hidden">Форма связи</h2>
-      <form class="contact-us" action="https://echo.htmlacademy.ru" method="post">
-        <p class="contact-item">
-          <label for="contact-name">Ваше имя:</label>
-          <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+    <div class="container">
+      <section class="modal modal-map">
+        <button class="modal-close"><span class="visually-hidden">Закрить</span></button>
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/map-big.jpg" width="940" height="448" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </p>
-        <p class="contact-item">
-          <label for="contact-email">Ваш e-mail:</label>
-          <input id="contact-email" type="text" name="email" value="" placeholder="email@example.com">
-        </p>
-        <p class="contact-item">
-          <label for="contact-text">Текст письма:</label>
-          <textarea id="contact-text" rows="10" cols="30" name="text" placeholder="В свободной форме"></textarea><!--На stackoverflow пишут что нельзя писать input type="textarea", единственный способ добавить textarea - тегом <textarea></textarea>-->
-        </p>
-        <button class="button button-close" name="button" type="submit">Отправить</button>
-        <button class="modal-close">Закрить</button>
-      </form>
-    </section>
+      </section>
+      <section class="contact-us-form">
+        <h2 class="visually-hidden">Форма связи</h2>
+        <form class="contact-us" action="https://echo.htmlacademy.ru" method="post">
+          <button class="modal-close"><span class="visually-hidden">Закрить</span></button>
+          <div class="name-surname">
+            <p class="contact-item">
+              <label for="contact-name">Ваше имя:</label>
+              <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            </p>
+            <p class="contact-item">
+              <label for="contact-email">Ваш e-mail:</label>
+              <input id="contact-email" type="text" name="email" value="" placeholder="email@example.com">
+            </p>
+            <p class="contact-item">
+              <label for="contact-text">Текст письма:</label>
+              <textarea id="contact-text" rows="10" cols="30" name="text" placeholder="В свободной форме"></textarea><!--На stackoverflow пишут что нельзя писать input type="textarea", единственный способ добавить textarea - тегом <textarea></textarea>-->
+            </p>
+          </div>
+          <div class="contact-us-send">
+            <button class="button button-close" name="button" type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
+    </div>
   </body>
 </html>
