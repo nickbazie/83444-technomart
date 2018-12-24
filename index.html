@@ -16,7 +16,11 @@
         <div class="container">
           <div class="navigation-items">
             <span class="main-logo">Техномарт</span>
-            <span class="search">Поиск:</span>
+            <form class="nav-search" action="https://echo.htmlacademy.ru">
+              <label class="search-label" for="search-form"></label>
+              <input class="search" type="text" id="search-form" placeholder="Поиск:">
+              <input class="search-submit visually-hidden" type="submit">
+            </form>
             <ul class="order-menu">
               <li class="bookmarks"><a href="#">Закладки: 0</a></li>
               <li class="basket"><a href="#">Корзина: 0</a></li>
@@ -28,9 +32,7 @@
       <div class="container">
         <div class="navigation-second-row">
           <p class="shop-description">
-            Интернет-магазин
-            строительных материалов<br>
-            и инструментов для ремонта
+            Интернет-магазин строительных материалов <span class="shop-new-row">и инструментов для ремонта</span>
           </p>
           <div class="phone-address">
             <span class="phone">+7 (812) 555-05-55</span>
@@ -215,37 +217,35 @@
         </div>
       </section>
     </footer>
-    <div class="container">
-      <section class="modal modal-map">
+    <div class="modal modal-map">
+      <button class="modal-close"><span class="visually-hidden">Закрить</span></button>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map-big.jpg" width="940" height="448" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+    </div>
+    <div class="contact-us-form">
+      <h2 class="visually-hidden">Форма связи</h2>
+      <form class="contact-us" action="https://echo.htmlacademy.ru" method="post">
         <button class="modal-close"><span class="visually-hidden">Закрить</span></button>
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <p>
-          <img src="img/map-big.jpg" width="940" height="448" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        </p>
-      </section>
-      <section class="contact-us-form">
-        <h2 class="visually-hidden">Форма связи</h2>
-        <form class="contact-us" action="https://echo.htmlacademy.ru" method="post">
-          <button class="modal-close"><span class="visually-hidden">Закрить</span></button>
-          <div class="name-surname">
-            <p class="contact-item">
-              <label for="contact-name">Ваше имя:</label>
-              <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-            </p>
-            <p class="contact-item">
-              <label for="contact-email">Ваш e-mail:</label>
-              <input id="contact-email" type="text" name="email" value="" placeholder="email@example.com">
-            </p>
-            <p class="contact-item">
-              <label for="contact-text">Текст письма:</label>
-              <textarea id="contact-text" rows="10" cols="30" name="text" placeholder="В свободной форме"></textarea><!--На stackoverflow пишут что нельзя писать input type="textarea", единственный способ добавить textarea - тегом <textarea></textarea>-->
-            </p>
-          </div>
-          <div class="contact-us-send">
-            <button class="button button-close" name="button" type="submit">Отправить</button>
-          </div>
-        </form>
-      </section>
+        <div class="name-surname">
+          <p class="contact-item">
+            <label for="contact-name">Ваше имя:</label>
+            <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p class="contact-item">
+            <label for="contact-email">Ваш e-mail:</label>
+            <input id="contact-email" type="text" name="email" value="" placeholder="email@example.com">
+          </p>
+          <p class="contact-item">
+            <label for="contact-text">Текст письма:</label>
+            <textarea id="contact-text" rows="10" cols="30" name="text" placeholder="В свободной форме"></textarea><!--На stackoverflow пишут что нельзя писать input type="textarea", единственный способ добавить textarea - тегом <textarea></textarea>-->
+          </p>
+        </div>
+        <div class="contact-us-send">
+          <button class="button button-close" name="button" type="submit">Отправить</button>
+        </div>
+      </form>
     </div>
   </body>
 </html>

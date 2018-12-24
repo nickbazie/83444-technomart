@@ -33,7 +33,7 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.main-h1 {
+.main-h2 {
   margin:0;
   padding: 33px 0 35px 30px;
   font-family: "Cuprum", sans-serif;
@@ -161,14 +161,25 @@ input[type="radio"].visually-hidden {
   font-family: "Cuprum", sans-serif;
   font-size: 17px;
   line-height: 18px;
+  color: #ffffff;
+  border: none;
+  background-color: inherit;
 }
 
-.search::before {
+.search::placeholder {
+  color: #ffffff;
+}
+
+.search-label {
+  position: relative;
+}
+
+.search-label::before {
   content: "";
 
   position: absolute;
   top: 12px;
-  left:18px;
+  left: 18px;
 
   width: 17px;
   height: 17px;
@@ -185,17 +196,21 @@ input[type="radio"].visually-hidden {
   background-color: #212a3a;
 }
 
-.search:hover::before,
-.search:focus::before {
-opacity: 1;
-}
-
 .search:active {
   color: #000000;
   background-color: #ffffff;
 }
 
-.search:active::before {
+.search:hover + .search-label::before,
+.search:focus + .search-label::before {
+  opacity: 1;
+}
+
+.search-label:active::before {
+ background-image: url("../img/icon-search-red.svg"); 
+}
+
+.search:active + .search-label::before {
   background-image: url("../img/icon-search-red.svg");
 }
 
@@ -467,12 +482,12 @@ opacity: 1;
 .shop-description {
   display: block;
   box-sizing: border-box;
-  width: 300px;
+  width: 250px;
 
   margin: 0;
   margin-top: 3px;
+  margin-right: 55px;
   padding-left: 52px;
-  padding-right: 50px;
   padding-bottom: 41px;
 
   font-family: "Cuprum", sans-serif;
@@ -480,6 +495,10 @@ opacity: 1;
   font-size: 16px;
   line-height: 23px;
   color: #ee3643
+}
+
+.shop-new-row {
+  display: block;
 }
 
 .phone-address {
@@ -761,7 +780,7 @@ opacity: 1;
   background: url("../img/icon-home.svg");
 }
 
-.h1-name h1 {
+.h2-name h2 {
     padding-top: 30px;
     padding-bottom: 30px;
   background-color: #f2f6f8;
@@ -920,17 +939,17 @@ opacity: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 750px;
+  justify-content: space-between;
+  width: 700px;
   padding: 0;
   margin-left: 20px;
 }
 
 .catalog-item {
-  position:relative;
-  display:inline-block;
-  width:218px;
-  margin-right:20px;
-  margin-bottom:20px;
+  position: relative;
+  display: inline-block;
+  width: 218px;
+  margin-bottom: 20px;
   padding-top: 30px;
   border:1px solid #ccc;
   line-height:20px;
@@ -1026,6 +1045,7 @@ opacity: 1;
 }
 
 .product-price-old {
+  display: block;
   font-weight: 700;
   min-height:20px;
   margin-top:10px;
@@ -1390,11 +1410,15 @@ text-decoration: none;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75); 
 }
 
+.modal {
+
+}
+
 .modal-map {      
   width: 940px;
   height: 448px;
   position: relative;
-
+  margin: 0 auto;
   box-shadow: 0px 0px 14.72px 1.28px rgba(0, 0, 0, 0.75); 
 
 }
