@@ -66,24 +66,64 @@
       <nav class="home-menu">
         <div class="home-menu-top">
           <ul class="home-menu-elements">
-            <li>Материалы</li>
-            <li>Инструмент</li>
-            <li>Техника</li>
+            <li>
+              <div class="elements-inside">
+                Материалы
+                <span>на любой вкус</span>
+              </div>
+            </li>
+            <li>
+                <div class="elements-inside">
+                  Инструмент
+                  <span>на все случаи</span>
+                </div>
+              </li>
+            <li>
+                <div class="elements-inside">
+                  Техника
+                  <span>для стройки</span>
+                </div>
+              </li>
           </ul>
         </div>
         <div class="home-menu-slider">
           <div class="slider">
             <ul class="slides">
                 <li class="slide-1">
-                  <h3>Дрели</h3>
-                  <p>Соседям на радость</p>
-                  <a class="button" href="/catalog.html">Открыть каталог</a>
+                  <div class="slide-inside ">
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость!</p>
+                    <a class="button" href="catalog.html">Открыть каталог</a>
+                  </div>
+                </li>
+                <li class="slide-2 slide-hide">
+                  <div class="slide-inside">
+                    <h3>Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                    <a class="button" href="catalog.html">Открыть каталог</a>
+                  </div>
                 </li>
             </ul> 
+            <div class="slider-controls">
+              <input type="radio" id="btn-1" name="toggle">
+              <input type="radio" id="btn-2" name="toggle" checked> 
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+            </div>
           </div>
-          <ul class="home-menu-elements">
-            <li>Скидка 50%</li>
-            <li>Доставка</li>
+          <ul class="home-menu-elements side-elements">
+            <li>
+              <div class="elements-inside">
+                Скидка 50%
+                <span>на 350 товаров</span>
+              </div>
+            </li>
+            <li>
+              <div class="elements-inside">
+                Доставка
+                <span>бесплатно</span>
+              </div>
+          </li>
           </ul>
         </div>
       </nav>
