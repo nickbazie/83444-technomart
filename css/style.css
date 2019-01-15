@@ -952,7 +952,7 @@ input[type="radio"].visually-hidden {
 
   margin-top: 43px; 
   padding: 29px 29px;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
   padding-right: 25px;
 
   background-color: #f9f5f0;
@@ -1285,6 +1285,87 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
+.price-range {
+  margin-bottom: 25px;
+}
+
+.price-field,
+.min-price,
+.max-price {
+  background-color: #f7f3ec;
+}
+
+.price-field {
+  padding: 39px 20px;
+  margin-bottom: 9px;
+}
+
+.price-line {
+  width:100%;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.active-line {
+  position: relative;
+  width: 152px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.active-line::before,
+.active-line::after { 
+  position: absolute;
+  content: "";
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.active-line::before {
+  left:0;
+}
+
+.active-line::after {
+  right: -9px;
+}
+
+.min-price,
+.max-price {
+  width: 95px;
+
+  padding: 9px 10px;
+
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.min-price {
+  position: relative;
+  padding-left: 18px;
+}
+
+.min-price::after {
+  position: absolute;
+  content: "";
+  top: 19px;
+  right: -20px;
+  width: 9px;
+  border-bottom: 1px solid #000000;
+  font-weight: 200;
+}
+
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filter {
   display: flex;
   flex-direction: column;
@@ -1307,6 +1388,66 @@ input[type="radio"].visually-hidden {
   background-color: #f7f3ec;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+.filter-products {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.sorting-options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+  margin-right: 85px;
+
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.sorting-options span {
+  border-bottom: 1px dotted  #ee3643;
+} 
+
+.sorting-options .sorting-option-active {
+  color: #ee3643;
+  border: none;
+}
+
+.filter-sorting {
+  position: relative;
+}
+
+.filter-ascending {
+  position: absolute;
+  top: 4px;
+  right: 29px;
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-bottom: 11px solid rgba(0, 0, 0, 0.2);
+}
+
+.filter-descending {
+  position: absolute;
+  top: 4px;
+  right: -4px;
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-top: 11px solid rgba(0, 0, 0, 0.2);
+}
+
+.filter-active {
+  border-top-color: #ee3643;
+  border-bottom-color: #ee3643;
 }
 
 .filter fieldset {
@@ -1333,7 +1474,7 @@ input[type="radio"].visually-hidden {
   
   width: 220px;
 
-  border: 1px solid #f7f3ec;
+  border-bottom: 1px solid #f7f3ec;
 }
 
 .price-legend::before {
@@ -1416,6 +1557,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-button {
+  margin-top: 57px;
+  padding: 9px 38px;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
@@ -1573,8 +1716,9 @@ input[type="radio"].visually-hidden {
 
 .catalog-item-image img{
   margin-top: -30px;
+  margin-left: -10px;
   max-width:100%;
-  padding-left: 15px;
+  padding-left: -10px;
   padding-right: 20px;
 }
 
