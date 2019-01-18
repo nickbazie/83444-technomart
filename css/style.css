@@ -168,7 +168,7 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: #ffffff;
   border: none;
-  background-color: inherit;
+  background-color: #293449;
 }
 
 .search::placeholder {
@@ -1131,10 +1131,6 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.service-form {
-  position: relative;
-}
-
 .service-form::after {
   content: "";
   position: absolute;
@@ -1226,7 +1222,7 @@ input[type="radio"].visually-hidden {
 
 .service-form {
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 105px;
 }
 
 .service-form::after {
@@ -1625,7 +1621,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: -3px;
   left: -35px;
-
+  
   width: 27px;
   height: 25px;
 
@@ -1980,7 +1976,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-tecnomart p {
-  margin-bottom: 23px;
+  margin-bottom: 10px;
 
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -2008,8 +2004,9 @@ input[type="radio"].visually-hidden {
   display: block;
   position: relative;
 
+  margin-top: 13px;
   margin-left: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   font-size: 18px;
   line-height: 20px;
@@ -2042,6 +2039,13 @@ input[type="radio"].visually-hidden {
 .contacts p {
   display: inline-block;
   margin-bottom: 32px;
+}
+
+.office-pick-up {
+  margin: 0;
+  display: inline-block;
+  width: 200px;
+  
 }
 
 .contacts .button {
@@ -2112,10 +2116,6 @@ text-decoration: none;
 .footer-bottom .footer-link:hover,
 .footer-bottom .footer-link:focus {
   text-decoration: underline;
-}
-
-.main-footer .main-logo a{
-  text-decoration: none;
 }
 
 .footer-bottom .footer-link:active {
@@ -2286,6 +2286,15 @@ text-decoration: none;
   left: 50%;
   transform: translateX(-50%);
 }
+
+.bottom-logo a {
+  text-decoration: none;
+}
+
+.bottom-logo a:hover {
+  text-decoration: none;
+}
+
 /*Поп-ап "Товар добавлен в корзину!" */
 
 .modal-cart {
@@ -2389,6 +2398,8 @@ text-decoration: none;
 }
 
 .modal-contact {
+  top: 150px;
+
   width: 620px;
 
   background-color: #ffffff;
