@@ -520,9 +520,7 @@ input[type="radio"].visually-hidden {
   color: #ee3643
 }
 
-.shop-new-row {
-  display: block;
-}
+
 
 .phone-address {
   width: 300px;
@@ -561,6 +559,8 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
 
   border: 2px solid #ffffff;
+
+  text-decoration: none;
 }
 
 .phone::before {
@@ -744,18 +744,18 @@ input[type="radio"].visually-hidden {
   height: 123px;
 
   margin: 10px;
-
+  padding: 21px 22px;
   font-family: "Cuprum", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
   background-color: #00ff00;
+  box-sizing: border-box;
 }
 
 .elements-inside {
   position: relative;
-  padding: 20px 22px;
 }
 
 .elements-icon {
@@ -798,7 +798,7 @@ input[type="radio"].visually-hidden {
   background-position: 190px 30px;
 }
 
-.home-menu-elements span {
+.home-menu-elements a {
   display: block;
   width: 135px;
 
@@ -806,6 +806,7 @@ input[type="radio"].visually-hidden {
   margin-left: 3px;
   padding: 10px 0;
 
+  color: #ffffff;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -817,17 +818,12 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
 }
 
-.home-menu-elements span:hover {
+.home-menu-elements a:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.home-menu-elements span:active {
+.home-menu-elements a:active {
   background: rgba(0, 0, 0, 0.3);
-}
-
-.home-menu-elements a {
-  text-decoration: none;
-  color: #ffffff;
 }
 
 .side-elements {
@@ -1341,6 +1337,16 @@ input[type="radio"].visually-hidden {
   background-color: #f7f3ec;
 }
 
+.min-price + span {
+  margin-left: 7px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.max-price {
+  margin-left: 4px;
+}
+
 .price-field {
   padding: 39px 20px;
   margin-bottom: 9px;
@@ -1380,36 +1386,32 @@ input[type="radio"].visually-hidden {
   right: -9px;
 }
 
-.min-price,
-.max-price {
+.prices-wrap label {
+  display: inline-block;
   width: 95px;
+  vertical-align: middle;
+  font-size: 17px;
+  line-height: 18px;
+}
 
-  padding: 9px 10px;
-  padding-bottom: 12px;
+.prices-wrap input {
+  width: 83px;
+  margin: 0;
+  padding: 9px 2px 12px 8px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   text-align: center;
-  box-sizing: border-box;
-}
-
-.min-price {
-  position: relative;
-  padding-left: 18px;
-}
-
-.min-price::after {
-  position: absolute;
-  content: "";
-  top: 19px;
-  right: -20px;
-  width: 9px;
-  border-bottom: 1px solid #000000;
-  font-weight: 200;
+  color: #000000;
+  border: none;
+  border-radius: 3px;
+  background: #f7f3ec;
 }
 
 .prices-wrap {
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
 }
 
 .filter {
@@ -1453,15 +1455,15 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   margin-left: 140px;
   margin-right: 85px;
-
-  color: rgba(0, 0, 0, 0.2);
 }
 
-.sorting-options span {
+.sorting-options a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.2);
   border-bottom: 1px dotted  #ee3643;
 } 
 
-.sorting-options span:hover {
+.sorting-options a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
@@ -1568,7 +1570,7 @@ input[type="radio"].visually-hidden {
   user-select: none;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox:not(:checked) + label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1579,31 +1581,32 @@ input[type="radio"].visually-hidden {
 
   background: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
+  opacity: 0.2;
 }
 
 .filter-input-checkbox:hover + label::before {
-  background: url("../img/checkbox-off-hvr.png");
+  opacity: 0.3;
 }
 
 .filter-input-checkbox:checked + label::after {
   content: "";
-
   position: absolute;
+  top: -2px;
+  left: -34px;
 
   width: 25px;
   height: 25px;
-  top: -2px;
-  left: -34px;
+
   background: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
+  opacity: 0.2;
 }
 
 .filter-input-checkbox:checked:hover + label::after {
-  height: 23px;
-  background: url("../img/checkbox-on-hvr.png");
+  opacity: 0.3;
 }
 
-.filter-input-radio + label::before {
+.filter-input-radio:not(:checked) + label::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -1614,29 +1617,31 @@ input[type="radio"].visually-hidden {
 
   background: url("../img/radio-off.svg");
   background-repeat: no-repeat;
-}
-
-.filter-input-radio:hover + label::before {
-  background: url("../img/radio-off-hvr.png");
+  opacity: 0.3;
 }
 
 .filter-input-radio:checked + label::after {
   content: "";
-
   position: absolute;
-
-  width: 27px;
-  height: 22px;
   top: -3px;
   left: -35px;
+
+  width: 27px;
+  height: 25px;
+
   background: url("../img/radio-on.svg");
   background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.filter-input-radio:hover + label::before {
+ opacity: 0.4;
 }
 
 .filter-input-radio:checked:hover + label::after {
-  background: url("../img/radio-on-hvr.png");
-  height: 22px;
+  height: 25px;
   width: 25px;
+  opacity: 0.4;
 }
 
 .filter-input-radio:disabled + label::before,
@@ -1647,7 +1652,7 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:checked:disabled + label::before,
 .filter-input-radio:checked:disabled + label::after,
 .filter-input-checkbox:checked:disabled + label::after {
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
 .filter-input-radio:disabled + label,
@@ -1767,7 +1772,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  top: -1px;
+  top: 0px;
   right: 0px;
   width:60px;
   height:60px;
@@ -1865,6 +1870,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item .product-price{
+  display: block;
   position:relative;
   width:80px;
   margin:7px auto;
@@ -1985,6 +1991,11 @@ input[type="radio"].visually-hidden {
   width: 550px;
 }
 
+.company-delivery-desc {
+  width: 400px;
+  display: inline-block;
+}
+
 .delivery-options {
   margin: 0;
   padding: 0;
@@ -2029,6 +2040,7 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts p {
+  display: inline-block;
   margin-bottom: 32px;
 }
 
@@ -2254,16 +2266,16 @@ text-decoration: none;
   width: 120px;
 }
 
-.footer-link-item b {
-  font-weight: 400;
-}
-
 .footer-link-item:last-child {
   padding: 0;
   padding-right: 18px;
   margin: 0;
 
   text-align: right;
+}
+
+.new-line-positioner {
+  display: block;
 }
 
 .modal {
@@ -2377,8 +2389,6 @@ text-decoration: none;
 }
 
 .modal-contact {
-  top: 150px;
-
   width: 620px;
 
   background-color: #ffffff;
