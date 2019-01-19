@@ -2468,7 +2468,6 @@ text-decoration: none;
 
 .contact-item textarea {
   width: 460px;
-
   padding: 6px 14px;
 
   font-size: 13px;
@@ -2481,7 +2480,6 @@ text-decoration: none;
 
 .contact-us-send button {
   display: block;
-
   width: 460px;
   
   text-align: center;
